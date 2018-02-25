@@ -1,0 +1,12 @@
+- hosts: all
+  become: yes
+  become_user: root
+  tasks:
+    - name: Deploy POC in Production
+      copy:
+        src: {{ SRC }}
+        dest: {{ DEST }}
+        owner: root
+        group: root
+        mode: 0777
+        force: yes

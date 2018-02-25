@@ -1,0 +1,5 @@
+---
+# defaults file for deploy-env
+
+folders: [/opt/poc, /opt/poc/model, /opt/toProd]
+deploy_play_script_dir: /opt/ansible/deploy/

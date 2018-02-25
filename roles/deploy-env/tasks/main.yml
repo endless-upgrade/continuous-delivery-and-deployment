@@ -1,0 +1,22 @@
+---
+# tasks file for deploy-env
+
+- name: Create temp and deploy folders
+  file:
+    path: "{{ item }}"
+    owner: root
+    group: root
+    mode: 0666
+    state: directory
+  with_items: "{{ folders }}"
+
+- name: Copy Deploy Script
+  copy:
+    src: "{{ item }}"
+    dest: "{{ deploy_play_script_dir }}"
+    owner: root
+    group: root
+  with_items:
+     - run-deploy-playbook.sh
+     - deploy.yml
+  
