@@ -19,5 +19,5 @@
   with_items:
      - run-deploy-playbook.sh
      - deploy.yml
-     - .hosts
+     - hosts
   
