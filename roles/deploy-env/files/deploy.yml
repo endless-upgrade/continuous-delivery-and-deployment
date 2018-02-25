@@ -4,8 +4,8 @@
   tasks:
     - name: Deploy POC in Production
       copy:
-        src: {{ SRC }}
-        dest: {{ DEST }}
+        src: "{{ SRC }}"
+        dest: "{{ DEST }}"
         owner: root
         group: root
         mode: 0777
